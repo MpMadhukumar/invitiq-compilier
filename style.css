@@ -922,3 +922,155 @@ nav {
     background: #2d2d2d;
     color: #66d9ef;
 }
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    /* Header adjustments */
+    header {
+        flex-direction: column;
+        padding: 10px 15px;
+        gap: 10px;
+    }
+    
+    .header-center {
+        order: -1;
+    }
+    
+    .brand-title {
+        font-size: 20px !important;
+    }
+    
+    nav {
+        width: 100%;
+        justify-content: space-around;
+        gap: 5px;
+    }
+    
+    .nav-btn {
+        font-size: 11px;
+        padding: 8px 12px;
+    }
+    
+    .logo-img {
+        height: 30px;
+    }
+    
+    /* Main container */
+    .container {
+        flex-direction: column;
+        padding: 10px;
+        gap: 15px;
+    }
+    
+    .editor-section,
+    .output-section {
+        width: 100% !important;
+        min-height: 400px;
+    }
+    
+    /* Section headers */
+    .section-header {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .code-runner-logo,
+    .output-logo {
+        height: 30px;
+    }
+    
+    .controls {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    
+    .language-selector,
+    .theme-selector {
+        flex: 1;
+        min-width: 120px;
+    }
+    
+    /* Editor and output */
+    #editor,
+    #output {
+        font-size: 12px;
+        min-height: 300px;
+    }
+    
+    /* Action buttons */
+    .action-buttons {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .action-btn {
+        flex: 1;
+        min-width: 100px;
+        font-size: 12px;
+        padding: 10px;
+    }
+    
+    /* Language dropdown */
+    .language-dropdown {
+        width: 95%;
+        max-height: 60vh;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .lang-option {
+        font-size: 13px;
+        padding: 12px;
+    }
+    
+    /* Chatbot */
+    .chatbot-container {
+        width: 95%;
+        height: 85vh;
+        bottom: 10px;
+        right: 2.5%;
+    }
+    
+    .chat-messages {
+        padding: 10px;
+    }
+    
+    .message {
+        max-width: 90%;
+        font-size: 13px;
+        padding: 10px;
+    }
+    
+    .chat-input-container {
+        padding: 10px;
+    }
+    
+    #chatInput {
+        font-size: 13px;
+    }
+}
+
+/* Extra small devices (phones in portrait) */
+@media (max-width: 480px) {
+    .brand-title {
+        font-size: 18px !important;
+    }
+    
+    .nav-btn {
+        font-size: 10px;
+        padding: 6px 8px;
+    }
+    
+    #editor,
+    #output {
+        font-size: 11px;
+    }
+    
+    .language-dropdown {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .action-btn {
+        font-size: 11px;
+        padding: 8px;
+    }
+}
