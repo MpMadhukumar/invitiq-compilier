@@ -1106,16 +1106,21 @@ nav {
     
     /* Language dropdown */
     .language-dropdown {
-        width: 90%;
-        max-height: 60vh;
+        width: 85%;
+        max-height: 50vh;
+        display: grid !important;
         grid-template-columns: repeat(2, 1fr);
-        right: 5%;
-        top: 100px;
+        right: 7.5%;
+        left: 7.5%;
+        top: 140px;
+        padding: 8px 5px;
     }
     
     .lang-option {
-        font-size: 13px;
-        padding: 12px;
+        font-size: 11px;
+        padding: 8px 10px;
+        border-radius: 4px;
+    }
     }
     
     /* Chatbot */
