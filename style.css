@@ -984,8 +984,16 @@ nav {
     .section-header {
         flex-wrap: wrap;
         gap: 10px;
-        padding: 10px;
-        height: auto;
+        padding: 10px !important;
+        height: auto !important;
+        display: flex !important;
+        visibility: visible !important;
+    }
+    
+    .section-title {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 5px;
     }
     
     .code-runner-logo,
@@ -997,22 +1005,24 @@ nav {
         width: 100%;
         flex-wrap: wrap;
         justify-content: space-between;
+        gap: 8px;
     }
     
     .language-selector,
     .theme-selector {
-        flex: 1;
+        flex: 1 1 45%;
         min-width: 100px;
         font-size: 12px;
-        padding: 6px 12px;
+        padding: 8px 10px;
     }
     
     .run-btn,
     .select-all-btn {
-        flex: 1;
-        min-width: 80px;
+        flex: 1 1 45%;
+        min-width: 100px;
         font-size: 12px;
-        padding: 8px 15px;
+        padding: 10px 15px;
+        white-space: nowrap;
     }
     
     /* Editor and output */
