@@ -776,6 +776,11 @@ languageBtn.addEventListener('click', (e) => {
     languageDropdown.classList.toggle('active');
 });
 
+// Prevent dropdown from closing when clicking inside it
+languageDropdown.addEventListener('click', (e) => {
+    e.stopPropagation();
+});
+
 // Close dropdown when clicking outside
 document.addEventListener('click', () => {
     languageDropdown.classList.remove('active');
