@@ -933,22 +933,34 @@ nav {
     }
     
     .header-center {
+        position: relative;
+        left: 0;
+        transform: none;
         order: -1;
     }
     
     .brand-title {
-        font-size: 20px !important;
+        font-size: 24px !important;
+        letter-spacing: 2px;
+    }
+    
+    .brand-title::before,
+    .brand-title::after {
+        display: none;
     }
     
     nav {
         width: 100%;
         justify-content: space-around;
         gap: 5px;
+        flex-wrap: wrap;
     }
     
     .nav-btn {
         font-size: 11px;
         padding: 8px 12px;
+        flex: 1;
+        min-width: 80px;
     }
     
     .logo-img {
@@ -965,42 +977,74 @@ nav {
     .editor-section,
     .output-section {
         width: 100% !important;
-        min-height: 400px;
+        flex: none !important;
     }
     
     /* Section headers */
     .section-header {
         flex-wrap: wrap;
         gap: 10px;
+        padding: 10px;
+        height: auto;
     }
     
     .code-runner-logo,
     .output-logo {
-        height: 30px;
+        height: 35px;
     }
     
     .controls {
         width: 100%;
         flex-wrap: wrap;
+        justify-content: space-between;
     }
     
     .language-selector,
     .theme-selector {
         flex: 1;
-        min-width: 120px;
+        min-width: 100px;
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+    
+    .run-btn,
+    .select-all-btn {
+        flex: 1;
+        min-width: 80px;
+        font-size: 12px;
+        padding: 8px 15px;
     }
     
     /* Editor and output */
+    .editor-wrapper,
+    .output-display {
+        height: 350px !important;
+        min-height: 350px;
+    }
+    
     #editor,
-    #output {
+    .syntax-highlight-overlay {
+        font-size: 12px !important;
+        padding: 15px !important;
+    }
+    
+    .line-numbers {
+        font-size: 12px !important;
+        min-width: 35px;
+        max-width: 35px;
+        padding: 10px 5px;
+    }
+    
+    .output-display {
         font-size: 12px;
-        min-height: 300px;
+        padding: 15px;
     }
     
     /* Action buttons */
     .action-buttons {
         flex-wrap: wrap;
         gap: 8px;
+        padding: 10px;
     }
     
     .action-btn {
@@ -1010,11 +1054,18 @@ nav {
         padding: 10px;
     }
     
+    .clear-btn {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+    
     /* Language dropdown */
     .language-dropdown {
-        width: 95%;
+        width: 90%;
         max-height: 60vh;
         grid-template-columns: repeat(2, 1fr);
+        right: 5%;
+        top: 100px;
     }
     
     .lang-option {
@@ -1032,19 +1083,26 @@ nav {
     
     .chat-messages {
         padding: 10px;
+        max-height: none;
     }
     
-    .message {
-        max-width: 90%;
+    .message-content {
+        max-width: 85%;
         font-size: 13px;
         padding: 10px;
     }
     
-    .chat-input-container {
+    .chat-input-area {
         padding: 10px;
     }
     
-    #chatInput {
+    .chat-input {
+        font-size: 13px;
+        padding: 10px;
+    }
+    
+    .send-btn {
+        padding: 10px 20px;
         font-size: 13px;
     }
 }
@@ -1052,7 +1110,7 @@ nav {
 /* Extra small devices (phones in portrait) */
 @media (max-width: 480px) {
     .brand-title {
-        font-size: 18px !important;
+        font-size: 20px !important;
     }
     
     .nav-btn {
@@ -1060,9 +1118,22 @@ nav {
         padding: 6px 8px;
     }
     
+    .editor-wrapper,
+    .output-display {
+        height: 300px !important;
+        min-height: 300px;
+    }
+    
     #editor,
-    #output {
-        font-size: 11px;
+    .syntax-highlight-overlay,
+    .output-display {
+        font-size: 11px !important;
+    }
+    
+    .line-numbers {
+        font-size: 11px !important;
+        min-width: 30px;
+        max-width: 30px;
     }
     
     .language-dropdown {
