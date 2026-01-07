@@ -927,10 +927,10 @@ nav {
 @media (max-width: 768px) {
     /* Header adjustments */
     header {
-        flex-direction: row;
+        flex-direction: column;
         padding: 10px 15px;
         gap: 10px;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         position: relative;
     }
@@ -941,25 +941,27 @@ nav {
         z-index: 10;
         display: flex !important;
         visibility: visible !important;
+        align-self: flex-start;
     }
     
     .logo-img {
-        height: 40px;
+        height: 35px;
         display: block !important;
     }
     
     .header-center {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
+        position: relative;
+        left: 0;
+        transform: none;
         order: 1;
         text-align: center;
         z-index: 5;
-        pointer-events: none;
+        width: 100%;
+        margin: 5px 0;
     }
     
     .brand-title {
-        font-size: 22px !important;
+        font-size: 20px !important;
         letter-spacing: 1.5px;
     }
     
@@ -975,18 +977,19 @@ nav {
     nav {
         order: 2;
         display: flex;
-        gap: 4px;
+        gap: 5px;
         flex: 0 0 auto;
         z-index: 10;
-        width: auto;
-        margin-left: auto;
+        width: 100%;
+        justify-content: space-around;
     }
     
     .nav-btn {
-        font-size: 8px;
-        padding: 5px 6px;
+        font-size: 10px;
+        padding: 6px 10px;
         white-space: nowrap;
         min-width: auto;
+        flex: 1;
     }
     
     /* Main container */
@@ -1088,8 +1091,8 @@ nav {
     }
     
     .clear-btn {
-        font-size: 12px;
-        padding: 8px 15px;
+        font-size: 11px;
+        padding: 8px 12px;
     }
     
     /* Language dropdown */
