@@ -928,39 +928,35 @@ nav {
     /* Header adjustments */
     header {
         flex-direction: row;
-        flex-wrap: wrap;
-        padding: 10px 15px;
-        gap: 10px;
+        padding: 12px 15px;
+        gap: 0;
         justify-content: space-between;
         align-items: center;
+        position: relative;
     }
     
     .logo {
         order: 0;
         flex: 0 0 auto;
+        z-index: 10;
+    }
+    
+    .logo-img {
+        height: 35px;
     }
     
     .header-center {
-        position: relative;
-        left: 0;
-        transform: none;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
         order: 1;
-        flex: 1 1 auto;
-        text-align: left;
-        margin-left: 10px;
-    }
-    
-    nav {
-        order: 2;
-        width: 100%;
-        justify-content: space-around;
-        gap: 5px;
-        flex-wrap: wrap;
+        text-align: center;
+        z-index: 5;
     }
     
     .brand-title {
-        font-size: 24px !important;
-        letter-spacing: 2px;
+        font-size: 20px !important;
+        letter-spacing: 1.5px;
     }
     
     .brand-title::before,
@@ -968,15 +964,23 @@ nav {
         display: none;
     }
     
-    .nav-btn {
-        font-size: 11px;
-        padding: 8px 12px;
-        flex: 1;
-        min-width: 80px;
+    .brand-tagline {
+        display: none;
     }
     
-    .logo-img {
-        height: 35px;
+    nav {
+        order: 2;
+        display: flex;
+        gap: 5px;
+        flex: 0 0 auto;
+        z-index: 10;
+        width: auto;
+    }
+    
+    .nav-btn {
+        font-size: 9px;
+        padding: 6px 8px;
+        white-space: nowrap;
     }
     
     /* Main container */
@@ -997,7 +1001,7 @@ nav {
         flex-direction: column;
         align-items: stretch;
         gap: 10px;
-        padding: 15px !important;
+        padding: 12px !important;
         height: auto !important;
         display: flex !important;
         visibility: visible !important;
@@ -1006,12 +1010,12 @@ nav {
     .section-title {
         width: 100%;
         justify-content: center;
-        margin-bottom: 5px;
+        margin-bottom: 8px;
     }
     
     .code-runner-logo,
     .output-logo {
-        height: 40px;
+        height: 35px;
     }
     
     .controls {
@@ -1033,8 +1037,8 @@ nav {
     .select-all-btn,
     .run-btn {
         flex: 1 1 48%;
-        font-size: 13px;
-        padding: 12px 10px;
+        font-size: 12px;
+        padding: 10px 8px;
         white-space: nowrap;
     }
     
