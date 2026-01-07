@@ -1092,8 +1092,15 @@ nav {
     }
     
     .clear-btn {
-        font-size: 10px;
-        padding: 6px 10px;
+        font-size: 9px;
+        padding: 5px 8px;
+        border-radius: 4px;
+    }
+    
+    /* Chatbot close button */
+    .close-chat-btn {
+        font-size: 12px !important;
+        padding: 4px 10px !important;
         border-radius: 4px;
     }
     
