@@ -971,16 +971,17 @@ nav {
     nav {
         order: 2;
         display: flex;
-        gap: 5px;
+        gap: 3px;
         flex: 0 0 auto;
         z-index: 10;
         width: auto;
     }
     
     .nav-btn {
-        font-size: 9px;
-        padding: 6px 8px;
+        font-size: 8px;
+        padding: 5px 6px;
         white-space: nowrap;
+        min-width: auto;
     }
     
     /* Main container */
