@@ -928,9 +928,9 @@ nav {
     /* Header adjustments */
     header {
         flex-direction: row;
-        padding: 12px 15px;
-        gap: 0;
-        justify-content: space-between;
+        padding: 10px 15px;
+        gap: 10px;
+        justify-content: flex-start;
         align-items: center;
         position: relative;
     }
@@ -939,10 +939,13 @@ nav {
         order: 0;
         flex: 0 0 auto;
         z-index: 10;
+        display: flex !important;
+        visibility: visible !important;
     }
     
     .logo-img {
-        height: 35px;
+        height: 40px;
+        display: block !important;
     }
     
     .header-center {
@@ -952,10 +955,11 @@ nav {
         order: 1;
         text-align: center;
         z-index: 5;
+        pointer-events: none;
     }
     
     .brand-title {
-        font-size: 20px !important;
+        font-size: 22px !important;
         letter-spacing: 1.5px;
     }
     
@@ -971,10 +975,11 @@ nav {
     nav {
         order: 2;
         display: flex;
-        gap: 3px;
+        gap: 4px;
         flex: 0 0 auto;
         z-index: 10;
         width: auto;
+        margin-left: auto;
     }
     
     .nav-btn {
