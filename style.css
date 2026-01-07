@@ -1083,19 +1083,21 @@ nav {
     
     /* Language dropdown */
     .language-dropdown {
-        width: 85%;
-        max-height: 50vh;
+        width: 70%;
+        max-height: 40vh;
         display: grid !important;
         grid-template-columns: repeat(2, 1fr);
-        right: 7.5%;
-        left: 7.5%;
-        top: 140px;
-        padding: 8px 5px;
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 120px;
+        padding: 6px 4px;
+        overflow-y: auto;
     }
     
     .lang-option {
-        font-size: 11px;
-        padding: 8px 10px;
+        font-size: 10px;
+        padding: 6px 8px;
         border-radius: 4px;
     }
     
