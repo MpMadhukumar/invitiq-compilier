@@ -1032,22 +1032,22 @@ nav {
         display: flex !important;
         flex-wrap: wrap;
         justify-content: space-between;
-        gap: 8px;
+        gap: 6px;
     }
     
     .language-selector {
         flex: 1 1 100%;
         width: 100%;
-        font-size: 13px;
-        padding: 10px;
+        font-size: 11px;
+        padding: 8px;
         margin-bottom: 5px;
     }
     
     .select-all-btn,
     .run-btn {
         flex: 1 1 48%;
-        font-size: 12px;
-        padding: 10px 8px;
+        font-size: 11px;
+        padding: 8px 6px;
         white-space: nowrap;
     }
     
