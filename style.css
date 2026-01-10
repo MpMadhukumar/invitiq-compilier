@@ -1083,22 +1083,25 @@ nav {
     
     /* Language dropdown */
     .language-dropdown {
-        width: 70%;
-        max-height: 40vh;
+        width: 80%;
+        max-height: 45vh;
         display: grid !important;
         grid-template-columns: repeat(2, 1fr);
+        gap: 4px;
         right: auto;
         left: 50%;
         transform: translateX(-50%);
-        top: 120px;
-        padding: 6px 4px;
+        top: 130px;
+        padding: 8px 6px;
         overflow-y: auto;
+        border-radius: 8px;
     }
     
     .lang-option {
-        font-size: 10px;
-        padding: 6px 8px;
-        border-radius: 4px;
+        font-size: 11px;
+        padding: 8px 10px;
+        border-radius: 6px;
+        text-align: center;
     }
     
     /* Chatbot */
