@@ -1,5 +1,9 @@
 // @ts-nocheck
 /* eslint-disable */
+
+// Get API base URL from config
+const API_BASE_URL = (typeof API_CONFIG !== 'undefined') ? API_CONFIG.BASE_URL : 'http://localhost:5000';
+
 // Language templates
 const codeTemplates = {
     python: `# Python Code
@@ -572,7 +576,7 @@ async function checkSyntaxErrors() {
         
         // Then check with backend for more detailed analysis
         try {
-            const response = await fetch('http://localhost:5000/api/compile', {
+            const response = await fetch(`${API_BASE_URL}/api/compile`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -1711,7 +1715,7 @@ function executeCode(code, lang, userInputs = []) {
 // Execute code via backend API
 async function executeViaBackend(code, lang, userInputs = []) {
     try {
-        const response = await fetch('http://localhost:5000/api/compile', {
+        const response = await fetch(`${API_BASE_URL}/api/compile`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -1830,7 +1834,7 @@ async function executeViaBackend(code, lang, userInputs = []) {
         displayOutput(
             `Backend Connection Error:\n\n` +
             `Could not connect to the backend server.\n` +
-            `Make sure the Flask API is running on http://localhost:5000\n\n` +
+            `Make sure the Flask API is running on ${API_BASE_URL}\n\n` +
             `Error: ${error.message}`,
             'error'
         );
@@ -1928,7 +1932,7 @@ async function sendChatMessage() {
     
     try {
         // Call Gemini API
-        const response = await fetch('http://localhost:5000/api/chat', {
+        const response = await fetch(`${API_BASE_URL}/api/chat`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

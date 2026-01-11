@@ -1237,6 +1237,7 @@ def api_docs():
 
 if __name__ == '__main__':
     print("🚀 Starting AI/ML Compiler API Server...")
-    print("📝 API Documentation: http://localhost:5000/")
-    print("🔍 Health Check: http://localhost:5000/api/health")
-    app.run(debug=False, host='0.0.0.0', port=5000, use_reloader=False)
+    port = int(os.environ.get('PORT', 5000))
+    print(f"📝 API Documentation: http://localhost:{port}/")
+    print(f"🔍 Health Check: http://localhost:{port}/api/health")
+    app.run(debug=False, host='0.0.0.0', port=port, use_reloader=False)
