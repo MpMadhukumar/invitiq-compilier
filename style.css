@@ -1085,9 +1085,6 @@ nav {
     .language-dropdown {
         width: 80%;
         max-height: 45vh;
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 4px;
         right: auto;
         left: 50%;
         transform: translateX(-50%);
@@ -1095,6 +1092,12 @@ nav {
         padding: 8px 6px;
         overflow-y: auto;
         border-radius: 8px;
+    }
+    
+    .language-dropdown.active {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4px;
     }
     
     .lang-option {
