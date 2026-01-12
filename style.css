@@ -210,7 +210,7 @@ nav {
 .container {
     display: flex;
     gap: 20px;
-    padding: 30px;
+    padding: 20px 30px 10px 30px;
     max-width: 1600px;
     margin: 0 auto;
     align-items: stretch;
@@ -363,7 +363,7 @@ nav {
 
 .editor-wrapper {
     display: flex;
-    height: 500px;
+    height: 600px;
     position: relative;
     background: #1e1e1e;
 }
