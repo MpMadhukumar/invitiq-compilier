@@ -570,14 +570,17 @@ nav {
 }
 
 .code-editor::selection {
-    background: rgba(38, 79, 120, 0.5) !important;
-    color: transparent !important;
-    -webkit-text-fill-color: transparent !important;
+    background: #264f78 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    text-shadow: none !important;
 }
 
 .code-editor::-moz-selection {
-    background: rgba(38, 79, 120, 0.5) !important;
-    color: transparent !important;
+    background: #264f78 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    text-shadow: none !important;
 }
 
 .input-section {
