@@ -3,7 +3,7 @@
 const API_CONFIG = {
     // For local testing: 'http://localhost:5000'
     // After deployment: 'https://your-app-name.onrender.com'
-    BASE_URL: 'https://invitiq-compiler-1onrender.com'
+    BASE_URL: 'https://invitiq-compiler-1.onrender.com'
 };
 
 // Export for use in script.js
