@@ -1,8 +1,12 @@
 import os
 import google.generativeai as genai
 
-# Load API key
-API_KEY = "AIzaSyD5GrkrH6Owl9RpoV7FNolTGbzhhS-yQ2E"
+# Load API key from environment
+API_KEY = os.environ.get('GEMINI_API_KEY', '')
+if not API_KEY:
+    print("❌ Error: GEMINI_API_KEY environment variable not set")
+    print("Get your key from: https://aistudio.google.com/apikey")
+    exit(1)
 
 try:
     genai.configure(api_key=API_KEY)

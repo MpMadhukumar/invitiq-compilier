@@ -63,14 +63,14 @@ nav {
 .brand-title {
     font-size: 26px;
     font-weight: 900;
-    background: linear-gradient(135deg, #2d5f4f 0%, #1a9b7f 30%, #20c997 60%, #4fd1c5 100%);
+    background: linear-gradient(90deg, #20c997 0%, #1a9b7f 50%, #20c997 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin: 0;
     letter-spacing: 2px;
     text-transform: uppercase;
-    font-family: 'Poppins', 'Arial', sans-serif;
+    font-family: 'Montserrat', 'Poppins', sans-serif;
     position: relative;
     filter: drop-shadow(2px 4px 8px rgba(45, 95, 79, 0.4));
 }
@@ -232,6 +232,10 @@ nav {
 .output-section {
     flex: 0.85;
     transition: all 0.3s ease;
+    background: transparent;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .output-section.shrink {
@@ -340,7 +344,7 @@ nav {
     transform: scale(0.98);
 }
 
-.select-all-btn {
+.download-btn {
     background: #3498db;
     color: white;
     border: none;
@@ -352,12 +356,12 @@ nav {
     transition: all 0.3s;
 }
 
-.select-all-btn:hover {
+.download-btn:hover {
     background: #2980b9;
     transform: scale(1.05);
 }
 
-.select-all-btn:active {
+.download-btn:active {
     transform: scale(0.98);
 }
 
@@ -700,7 +704,7 @@ nav {
 
 .output-display {
     background: #1a1a1a;
-    height: 450px;
+    flex: 1;
     padding: 20px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 14px;
@@ -799,9 +803,10 @@ nav {
 .chat-input-area {
     display: flex;
     gap: 10px;
-    padding: 15px;
+    padding: 20px 15px;
     background: white;
     border-top: 2px solid #e0e0e0;
+    margin-top: auto;
 }
 
 .chat-input {
@@ -901,6 +906,17 @@ nav {
 .bot-message .inline-code {
     background: #2d2d2d;
     color: #66d9ef;
+}
+
+/* Desktop specific styles */
+@media (min-width: 769px) {
+    .editor-wrapper {
+        min-height: 600px;
+    }
+    
+    .output-section {
+        min-height: 600px;
+    }
 }
 
 /* Mobile Responsive Design */
@@ -1023,7 +1039,7 @@ nav {
         border-radius: 4px;
     }
     
-    .select-all-btn,
+    .download-btn,
     .run-btn {
         flex: 1 1 30%;
         font-size: 9px;

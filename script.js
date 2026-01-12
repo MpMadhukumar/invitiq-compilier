@@ -181,7 +181,7 @@ const chatMessages = document.getElementById('chatMessages');
 const chatInput = document.getElementById('chatInput');
 const sendBtn = document.getElementById('sendBtn');
 const autocompleteDropdown = document.getElementById('autocompleteDropdown');
-const selectAllBtn = document.getElementById('selectAllBtn');
+const downloadBtn = document.getElementById('downloadBtn');
 
 // Java keywords and built-in types
 const javaKeywords = [
@@ -825,11 +825,39 @@ if (languageSelector) {
     });
 }
 
-// Select All button handler
-if (selectAllBtn) {
-    selectAllBtn.addEventListener('click', () => {
-        codeEditor.select();
-        codeEditor.focus();
+// Download button handler
+if (downloadBtn) {
+    downloadBtn.addEventListener('click', () => {
+        const code = codeEditor.value;
+        const languageExtensions = {
+            'python': 'py',
+            'java': 'java',
+            'sql': 'sql',
+            'r': 'r',
+            'c': 'c',
+            'cpp': 'cpp',
+            'javascript': 'js',
+            'go': 'go',
+            'php': 'php'
+        };
+        
+        const extension = languageExtensions[currentLang] || 'txt';
+        const filename = `code.${extension}`;
+        
+        // Create a blob with the code content
+        const blob = new Blob([code], { type: 'text/plain' });
+        const url = URL.createObjectURL(blob);
+        
+        // Create a temporary anchor element and trigger download
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        
+        // Cleanup
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
     });
 }
 
@@ -862,10 +890,10 @@ function detectLanguageFromCode(code) {
     if (/^\s*(SELECT|INSERT|UPDATE|DELETE|CREATE|ALTER|DROP)/im.test(code)) {
         return 'sql';
     }
-    // JavaScript/TypeScript detection
+    // JavaScript detection
     if (code.includes('const ') || code.includes('let ') || code.includes('function') ||
         code.includes('console.log')) {
-        return code.includes(': string') || code.includes(': number') ? 'typescript' : 'javascript';
+        return 'javascript';
     }
     // PHP detection
     if (code.includes('<?php')) {
@@ -904,7 +932,7 @@ runBtn.addEventListener('click', async () => {
                      (code.includes('readlineSync') || code.includes('question')) ||
                      (code.includes('readline(') || code.includes('scan('));
     
-    if (hasInput && (currentLang === 'python' || currentLang === 'cpp' || currentLang === 'java' || currentLang === 'c' || currentLang === 'javascript' || currentLang === 'go' || currentLang === 'php' || currentLang === 'typescript' || currentLang === 'r')) {
+    if (hasInput && (currentLang === 'python' || currentLang === 'cpp' || currentLang === 'java' || currentLang === 'c' || currentLang === 'javascript' || currentLang === 'go' || currentLang === 'php' || currentLang === 'r')) {
         // Show interactive input prompt directly in output
         await executeWithInteractiveInput(code, currentLang);
     } else {
