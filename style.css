@@ -70,7 +70,7 @@ nav {
     margin: 0;
     letter-spacing: 2px;
     text-transform: uppercase;
-    font-family: 'Montserrat', 'Arial Black', sans-serif;
+    font-family: 'Poppins', 'Arial', sans-serif;
     position: relative;
     filter: drop-shadow(2px 4px 8px rgba(45, 95, 79, 0.4));
 }
