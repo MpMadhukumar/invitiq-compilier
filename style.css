@@ -61,14 +61,14 @@ nav {
 }
 
 .brand-title {
-    font-size: 36px;
+    font-size: 26px;
     font-weight: 900;
     background: linear-gradient(135deg, #2d5f4f 0%, #1a9b7f 30%, #20c997 60%, #4fd1c5 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin: 0;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     text-transform: uppercase;
     font-family: 'Montserrat', 'Arial Black', sans-serif;
     position: relative;
