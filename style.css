@@ -210,7 +210,7 @@ nav {
 .container {
     display: flex;
     gap: 20px;
-    padding: 20px 30px 10px 30px;
+    padding: 20px 15px 10px 30px;
     max-width: 1600px;
     margin: 0 auto;
     align-items: stretch;
@@ -230,7 +230,7 @@ nav {
 }
 
 .output-section {
-    flex: 0.7;
+    flex: 0.85;
     transition: all 0.3s ease;
 }
 
