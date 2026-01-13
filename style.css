@@ -367,7 +367,7 @@ nav {
 
 .editor-wrapper {
     display: flex;
-    height: 600px;
+    height: 550px;
     position: relative;
     background: #1e1e1e;
 }
@@ -760,7 +760,7 @@ nav {
     flex-direction: column;
     gap: 15px;
     min-height: 0;
-    max-height: 450px;
+    max-height: 430px;
 }
 
 .chat-message {
@@ -911,11 +911,11 @@ nav {
 /* Desktop specific styles */
 @media (min-width: 769px) {
     .editor-wrapper {
-        min-height: 600px;
+        min-height: 550px;
     }
     
     .output-section {
-        min-height: 600px;
+        min-height: 550px;
     }
 }
 
